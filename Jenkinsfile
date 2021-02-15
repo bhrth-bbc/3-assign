@@ -18,7 +18,7 @@ pipeline {
   stage ('deploy war file on docker container'){
   steps {
   sh "docker --version"
-  sh "cd /var/lib/jenkins/workspace/docker-project/target/springboot-helloworld-0.0.1-SNAPSHOT.war;docker build -t qwerty:newtag -f Dockerfile ."
+  sh "cd /opt/docker/springboot-helloworld-0.0.1-SNAPSHOT.war;docker build -t qwerty:newtag -f Dockerfile ."
   sh "docker run -p 1234:8080 -d qwerty:newtag"
   }
   }
