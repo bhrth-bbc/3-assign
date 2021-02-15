@@ -1,7 +1,7 @@
 pipeline {
   agent any
   environment {
-  PATH=/opt/maven/apache-maven-3.6.3:$PATH
+  PATH="/opt/maven/apache-maven-3.6.3:$PATH"
   }
   stages {
   stage ('scm checkout'){
